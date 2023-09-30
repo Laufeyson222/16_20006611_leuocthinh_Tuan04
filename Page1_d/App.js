@@ -61,7 +61,7 @@ export default function App() {
       
       
       <div style={{
-        backgroundColor: '#fff',
+        backgroundColor: '#A6FFCB',
         display: 'flex',
         height: 130,
         width: 360,
@@ -136,7 +136,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#A6FFCB',
     alignItems: 'center',
   },
 });

@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Image } from 'react-native';
+import { StyleSheet, Text, View, Image,backgroundImage } from 'react-native';
 
 export default function App() {
   return (
@@ -84,7 +84,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#F6C700',
+    backgroundImage:"linear-gradient(#FFE000,#BA8B02,#666600)",
     alignItems: 'center',
     
   },

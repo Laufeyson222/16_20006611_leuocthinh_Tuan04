@@ -1,68 +1,49 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Image } from 'react-native';
+
+import { StyleSheet, Text, View, Image, TextInput, TouchableOpacity,backgroundImage } from 'react-native';
+
 
 export default function App() {
   return (
+    
     <View style={styles.container}>
-      <Image style={{width:90, height:100}} source={
-        require('./assets/lock.png')
-      }/>
-      <Text style={{
-        fontWeight: 'bold',
-        fontSize: 20,
-        color: '#000',
-        margin: 20,
-        padding: 24,
-        textAlign: 'center'
-      }}>FORGET <br/> PASSWORD</Text>
-      <Text style={{
-        fontWeight: 'bold',
-        fontSize: 15,
-        color: '#000',
-        marginBottom: 20,
-        textAlign: 'center',
-        padding: 20
-      }}>
-        Provide your account's email for which you want to reset your password. 
-      </Text>
-      <div style={{
-        display: 'flex',
-        flexDirection: 'row',
-        width: 350,
-        height: 42,
-        backgroundColor: '#C4C4C4',
-      }}>
-          <Image style={{width:39, height:39}} source={
-          require('./assets/mail.png')
-          }/>
-          <input type='text' placeholder='Email'  style={{
-            width: 350,
-            height: 40,
-            border: 'none',
-            backgroundColor: '#C4C4C4',
-          }}/>
-      </div>
-      <input type='submit' value='NEXT' style={{
-        width: 350,
-        height: 40,
-        fontSize: 17,
-        fontWeight: 'bold',
-        border: 'none',
-        backgroundColor: '#E3C000',
-        color: '#000',
-        marginTop: 40
-      }}/>
-      
+        <Image style={{ width: 105, height: 120}} source={require('./assets/lock.png')} />
+        <View style={styles.bodyText}>
+          <Text style={{ fontSize: 25, fontWeight: 'bold' }}>FORGET</Text>
+          <Text style={{ fontSize: 25, fontWeight: 'bold' }}>PASSWORD</Text>
+        </View>
+        <View style={styles.bodyTitle}>
+          <Text style={{ fontSize: 15, fontWeight: 'bold' }}>Provide your account’s email for which you</Text>
+          <Text style={{ fontSize: 15, fontWeight: 'bold' }}>want to reset your password</Text>
+        </View>
+        <View style={styles.bodyInput}>
+          <Image style={{width:48,height:45}} source={require('./assets/email.png')}/>
+          <TextInput style={{width:260,height:45,backgroundColor:'#C4C4C4'}} placeholder="Email" />
+        </View>
+        <TouchableOpacity style={{width:310,height:45,backgroundColor:'#E3C000',marginBottom:50,justifyContent:'center',alignItems:'center'}}>
+          <Text style={{fontSize:20,fontWeight:'bold',color:'#000'}}>NEXT</Text>
+        </TouchableOpacity>
     </View>
+    
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    paddingTop: 100,
-    
+    backgroundImage:"linear-gradient(#FFFFFF,#6DD5FA)",
+    alignItems:'center',
+    justifyContent:'space-evenly',
+    height: 700,
   },
+  bodyText: {
+    alignItems: 'center',
+    justifyContent:'space-around'
+  },
+  bodyTitle: {
+    alignItems: 'center',
+  },
+  bodyInput: {
+    flexDirection: 'row',
+    alignItems: 'center',
+  }
 });

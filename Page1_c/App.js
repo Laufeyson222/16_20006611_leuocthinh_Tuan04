@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View,backgroundImage } from 'react-native';
 
 export default function App() {
   return (
@@ -36,7 +36,8 @@ export default function App() {
       </div>
       <input type='submit' value='VERIFY CODE' style={{
         backgroundColor: '#E3C000',
-        color: '#fff',
+        color: 'black',
+        fontWeight:900,
         width: 350,
         height: 50,
         border: 'none',
@@ -50,7 +51,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundImage:"linear-gradient(#FFFFFF,#6DD5FA)",
     alignItems: 'center',
     
   },
